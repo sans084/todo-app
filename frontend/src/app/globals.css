@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+body { background: #0a0a0f; color: #f5f3ee; font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+::selection { background: #e8462a; color: white; }
+
+@layer components {
+  .input-field {
+    @apply w-full bg-[#1a1a24] border border-[#2a2a38] text-[#f5f3ee] placeholder-[#8a8880] text-sm px-4 py-3 outline-none focus:border-[#e8462a]/60 transition-colors;
+  }
+  .btn-primary {
+    @apply bg-[#e8462a] text-white font-display font-semibold px-6 py-3 text-sm hover:bg-red-600 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply border border-[#2a2a38] text-[#f5f3ee]/70 px-4 py-2 text-sm hover:border-[#f5f3ee]/40 hover:text-[#f5f3ee] transition-all;
+  }
+}
